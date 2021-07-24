@@ -10,7 +10,13 @@
 - Install docker btw
 
 - Composer
-    - sudo apt-indtall composer
+    - sudo apt-install composer
+
+##Set-up on Windows (using WSL2) 
+
+- https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly#configure-docker-for-windows
+     - [WSL2 Install](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+     - Possible issue if installing from Windows (When following "Expose daemon" step ): https://github.com/docker/for-win/issues/10701
 
 <!-- - PostGreSQL
     - sudo apt install postgresql-client-common
