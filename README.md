@@ -1,8 +1,14 @@
 # Need
+Tested on Ubuntu 20.04
+
 - Docker
 
 - Composer
     - sudo apt-install composer
+
+- PHP (7.4.3)
+    - sudo apt update
+    - sudo apt install php php-cli php-fpm php-json php-common php-mysql php-zip php-gd php-mbstring php-curl php-xml php-pear php-bcmath
 
 ## Set-up on Windows (using WSL2) 
 
@@ -20,6 +26,8 @@ composer update
 ./vendor/bin/sail up
 
 # To view data
+- php artisan migrate:install
+- php artisan db:seed
 http://localhost
 
 # Run the sail-docler to migrate and stuff
