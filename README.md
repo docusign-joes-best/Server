@@ -1,13 +1,5 @@
 # Need
-- [Docker Compose] (https://docs.docker.com/compose/install/)
-
-- Or do this
-
-    - sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-
-    - sudo chmod +x /usr/local/bin/docker-compose
-
-- Install docker btw
+- Docker
 
 - Composer
     - sudo apt-install composer
@@ -18,20 +10,14 @@
      - [WSL2 Install](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
      - Possible issue if installing from Windows (When following "Expose daemon" step ): https://github.com/docker/for-win/issues/10701
 
-<!-- - PostGreSQL
+<!-- <!-- - PostGreSQL
     - sudo apt install postgresql-client-common
-    - sudo apt-get install php-pgsql
-
-- PHP 
-    - sudo apt-get update
-    - sudo apt install php-xml
-    - sudo apt-get install php-mbstring
-    - composer update
-    - composer require cviebrock/eloquent-sluggable
- -->
+    - sudo apt-get install php-pgsql -->
 
 # To Initialize (Creates docker container):
-cd middleware && ./vendor/bin/sail up
+cd middleware 
+composer update
+./vendor/bin/sail up
 
 # To view data
 http://localhost
