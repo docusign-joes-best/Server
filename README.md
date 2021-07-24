@@ -14,7 +14,7 @@
 
 ## Set-up on Windows (using WSL2) 
 
-- https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly#configure-docker-for-windows
+- [Instructions](https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly#configure-docker-for-windows) (Credit: Nick Janetakis)
      - [WSL2 Install](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
      - Possible issue if installing from Windows (When following "Expose daemon" step ): https://github.com/docker/for-win/issues/10701
 
