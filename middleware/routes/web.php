@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,8 +14,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+
+Route::get('/User', function () {
+
+    $users = DB::table('UserTbl')
+    ->select('*')
+    ->get();    
+
     return view(
-        'welcome', ['users' => App\Models\User::all()]
+        'userTbl', ['users' => $users]
+    );
+});
+
+
+
+Route::get('/Modification', function () {
+
+    $modifications = DB::table('ModificationTbl')
+    ->join('StatusTbl', 'StatusTbl.statusID', '=', 'ModificationTbl.statusID')
+    ->join('UserTbl', 'UserTbl.userID', '=', 'ModificationTbl.proposerUserID')
+    ->select('*')
+    ->get();
+
+    return view(
+        'modificationTbl', [ 'modifcations' => $modifications]
     );
 });

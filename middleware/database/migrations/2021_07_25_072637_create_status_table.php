@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFlightsTable extends Migration
+class CreateStatusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateFlightsTable extends Migration
      */
     public function up()
     {
-        Schema::create('flights', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('airline');
-            $table->timestamps();
+        Schema::create('StatusTbl', function (Blueprint $table) {
+            // Primary key auto increment unsigned bigint
+            $table->bigIncrements('statusID');
+            $table->string('statusType');
+            $table->string('statusColor');
         });
     }
 
@@ -28,6 +28,6 @@ class CreateFlightsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('flights');
+        Schema::dropIfExists('StatusTbl');
     }
 }

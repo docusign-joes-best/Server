@@ -29,15 +29,19 @@
 
             <div class="pa2 mb3 striped--near-white">
 
-                <header class="b mb2">{{ $user->name }}</header>
+                <header class="b mb2">{{ $user->firstName}} {{ $user->lastName}}</header>
 
                 <div class="pl2">
 
-                    <p class="mb2">id: {{ $user->id }}</p>
+                    <p class="mb2">id: {{ $user->userID }}</p>
 
                     <p class="mb2">email: {{ $user->email }}</p>
 
-                    <p class="mb2">details: {{ $user->remember_token }}</p>
+                    <p class="mb2">password: {{ $user->password }}</p>
+
+                    <p class="mb2">arcGISUser: {{ $user->arcGISUser }}</p>
+
+                    <p class="mb2">dateCreated: {{ $user->dateCreated }}</p>
 
                 </div>
 
