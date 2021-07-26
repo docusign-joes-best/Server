@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             // Email should be unique
             $table->string('email')->unique();
             $table->string('password');
-            $table->boolean('arcGISUser');
+            $table->boolean('isArcGisUser');
             $table->timestamp('dateCreated');
         });
     }

@@ -39,7 +39,7 @@
 
                     <p class="mb2">password: {{ $user->password }}</p>
 
-                    <p class="mb2">arcGISUser: {{ $user->arcGISUser }}</p>
+                    <p class="mb2">isArcGisUser: {{ $user->isArcGisUser }}</p>
 
                     <p class="mb2">dateCreated: {{ $user->dateCreated }}</p>
 

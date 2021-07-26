@@ -26,7 +26,7 @@ class UserFactory extends Factory
             'lastName' => $this->faker->lastName,
             'email' => $this->faker->email(),
             'password' => $this->faker->password(), // password
-            'arcGISUser' => $this->faker->boolean(),
+            'isArcGisUser' => $this->faker->boolean(),
             'dateCreated' => date('Y-m-d H:i:s')
         ];
     }
